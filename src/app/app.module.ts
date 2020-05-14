@@ -5,16 +5,20 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {JokeComponent} from './components/joke/joke.component';
+import {HttpClientModule} from "@angular/common/http";
+import { QuotationMarkPipe } from './pipes/quotation-mark.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    JokeComponent
+    JokeComponent,
+    QuotationMarkPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
