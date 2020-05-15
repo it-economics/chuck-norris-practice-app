@@ -6,5 +6,9 @@ import {Component} from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'chuck-norris';
+  userIsLoggedIn = false;
+
+  handleLogin(loginResult) {
+    this.userIsLoggedIn = loginResult
+  }
 }

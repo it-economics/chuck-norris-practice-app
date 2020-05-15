@@ -3,22 +3,24 @@ import {NgModule} from '@angular/core';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {JokeComponent} from './components/joke/joke.component';
 import {HttpClientModule} from "@angular/common/http";
-import { QuotationMarkPipe } from './pipes/quotation-mark.pipe';
+import {QuotationMarkPipe} from './pipes/quotation-mark.pipe';
+import {FormsModule} from "@angular/forms";
+import {LoginComponent} from "./components/login/login.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     JokeComponent,
-    QuotationMarkPipe
+    QuotationMarkPipe,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

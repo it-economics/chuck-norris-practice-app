@@ -3,5 +3,6 @@
 </nav>
 
 <main role="main" class="container padding-top--70">
-  <app-joke></app-joke>
+  <app-login (loginResult)="handleLogin($event)" *ngIf="!userIsLoggedIn"></app-login>
+  <app-joke *ngIf="userIsLoggedIn"></app-joke>
 </main>
