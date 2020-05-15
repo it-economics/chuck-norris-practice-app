@@ -1,8 +1,9 @@
 import { QuotationMarkPipe } from './quotation-mark.pipe';
 
 describe('QuotationMarkPipe', () => {
-  it('create an instance', () => {
+  it('converts &quot; to "', () => {
     const pipe = new QuotationMarkPipe();
-    expect(pipe).toBeTruthy();
+
+    expect(pipe.transform('&quot;Hello &quot;World&quot;!')).toEqual('"Hello "World"!')
   });
 });
